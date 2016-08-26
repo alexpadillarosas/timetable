@@ -17,9 +17,10 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
-    <head>
-        <!--
+<html lang="en">
+
+<head>
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -28,22 +29,107 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+    <meta charset="utf-8">
+
+
+
+    <title>Hello World</title>
+
+</head>
+
+
+
+<body>
+
+    <div class="timetable">
+        <div class="container">
+
+            <nav class="fixed-nav-bar">
+                <a class="title">SCHEDULE</a>
+
+            </nav>
+        </div>
+
+        <div id="data-container">
+
+
+        </div>
+
+
+        <button type="button" id="floating-button-left" class="btn btn-outline-warning"> Del </button>
+        <button type="button" id="floating-button-right" class="btn btn-outline-success"> Add </button>
+
+
+    </div>
+
+    </div>
+    <div class="input-form">
+        <div class="container">
+
+            <nav class="fixed-nav-bar">
+
+                <a class="title">SCHEDULE</a>
+
+            </nav>
+
+
+        </div>
+        <div class="form-group row">
+            <label for="date-input" class="col-xs-2 col-form-label">Date</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="date" value="" id="date-input">
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+        <div class="form-group row">
+            <label for="start-time-input" class="col-xs-2 col-form-label">Start Time</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="time" value="" id="start-time-input" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="end-time-input" class="col-xs-2 col-form-label">End Time</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="time" value="" id="end-time-input" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="subject-text-input" class="col-xs-2 col-form-label">Subject</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" placeholder="subject" id="subject-text-input" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="classroom-text-input" class="col-xs-2 col-form-label">Classroom</label>
+            <div class="col-xs-10">
+                <input class="form-control" type="text" placeholder="classroom" id="classroom-text-input" required>
+            </div>
+        </div>
+
+        <div class="row-of-buttons">
+
+            <a class="btn btn-primary" id="back" href="#" role="button">Back</a>
+            <a class="btn btn-primary" id="save" href="#" role="button">Save</a>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery-2.2.4.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+
+</body>
+
 </html>
